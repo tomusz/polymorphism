@@ -21,7 +21,7 @@ public class Main {
 
         ObjectValidation.isNotNull.accept(null);
 
-        List<Mobile> mobileList = List.of(notARobot, fishingBoat, redLorry, john, submarine, superTruck);
+        var mobileList = List.of(notARobot, fishingBoat, redLorry, john, submarine, superTruck);
 
         System.out.println("\nVehicle check");
         var randomObject = isItVehicle(mobileList);
