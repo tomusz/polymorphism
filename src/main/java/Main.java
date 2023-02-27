@@ -43,13 +43,13 @@ public class Main {
         talkable.sayHello(ConstantsProvider.getHumanName());
     }
 
-    public static <T extends Mobile> Mobile isItVehicle(List<T> mobileObjects) {
+    public static <T extends Mobile> T isItVehicle(List<T> mobileObjects) {
         ObjectValidation.isNotEmpty.accept(Collections.singletonList(mobileObjects));
         mobileObjects.forEach(x -> System.out.println(ObjectValidation.isVehicle.apply(x)));
         return getRandomElementFromList(mobileObjects);
     }
 
-    public static <T extends Mobile> Mobile getRandomElementFromList(List<T> mobileObjects) {
+    public static <T extends Mobile> T getRandomElementFromList(List<T> mobileObjects) {
         return mobileObjects.get(ThreadLocalRandom.current().nextInt(0, mobileObjects.size() - 1));
     }
 }
