@@ -1,4 +1,12 @@
-import javax.sound.midi.Track;
+public class Truck extends Vehicle {
+    public Truck(int maxSpeed) {
+        super(maxSpeed);
+    }
 
-public class Truck extends Track {
+    @Override
+    public void move() {
+        System.out.println(String.format(VehicleConstatnsProvider.getVehicleWithVehicleNameMoveMsg(),
+                getMaxSpeed(),
+                ConstantsProvider.getSpeedUnitOfMeasure()));
+    }
 }

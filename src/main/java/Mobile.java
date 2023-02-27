@@ -1,3 +1,4 @@
+@FunctionalInterface
 public interface Mobile {
-    move();
+    void move();
 }

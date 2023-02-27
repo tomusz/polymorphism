@@ -1,3 +1,4 @@
+@FunctionalInterface
 public interface Talkable {
-    sayHello(String name);
+    void sayHello(String name);
 }
